@@ -18,6 +18,11 @@ public class BasicNavigations {
          //stop code execution for 3 seconds
         Thread.sleep(3000);
 
+        //get the title of the page
+        String currentTitle = driver.getTitle();
+        System.out.println("currentTitle = " + currentTitle);
+        String currentURL = driver.getCurrentUrl();
+        System.out.println("currentURL = " + currentURL);
 
         // use selenium to navigate back
         driver.navigate().back();
@@ -41,7 +46,12 @@ public class BasicNavigations {
         driver.navigate().to("https://google.com");
 
         //get the title of the page
-        System.out.println("driver.getTitle() = " + driver.getTitle());
+        currentTitle = driver.getTitle();
+        System.out.println("currentTitle = " + currentTitle);
+
+        // get the current URL using Selenium
+        currentURL = driver.getCurrentUrl();
+        System.out.println("currentURL = " + currentURL);
 
     }
 
