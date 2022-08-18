@@ -8,11 +8,10 @@ public class T1_CydeoVerification {
     public static void main(String[] args) {
 
         WebDriverManager.chromedriver().setup();
-
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
-        driver.get("http://practice.cybertekschool.com/");
+        driver.get("http://practice.cybertekschool.com");
 
         String actualURL = driver.getCurrentUrl();
         if(actualURL.contains("cybertekschool")){
