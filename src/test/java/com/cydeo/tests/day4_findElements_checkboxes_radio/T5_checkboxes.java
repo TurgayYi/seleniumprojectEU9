@@ -40,10 +40,9 @@ public class T5_checkboxes {
 
 
         //6. Confirm checkbox #1 is SELECTED.
+        System.out.println("checkbox1.isSelected(), expected true = " + checkbox1.isSelected());
         //7. Confirm checkbox #2 is NOT selected.
-
-
-
+        System.out.println("checkbox2.isSelected(), expected false = " + checkbox2.isSelected());
 
 
     }
