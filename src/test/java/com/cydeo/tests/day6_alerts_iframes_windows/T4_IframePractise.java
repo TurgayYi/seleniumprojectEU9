@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -15,7 +16,8 @@ public class T4_IframePractise {
     //TC #4: Iframe practice
     WebDriver driver;
 
-    @BeforeMethod
+   // @BeforeMethod
+    @BeforeClass
 
     public void setUpMethod(){
         //1. Create a new class called: T4_Iframes
@@ -44,11 +46,29 @@ public class T4_IframePractise {
 
         Assert.assertTrue(yourContentGoesHereText.isDisplayed());
 
+        //4. Assert: “Your content goes here.” Text is displayed.
+        //5. Assert: “An iFrame containing the TinyMCE WYSIWYG Edito
+
+        driver.switchTo().parentFrame();
+
+        //option #1 switching to iframe using id attribute value
+        WebElement headerText = driver.findElement(By.xpath("//h3"));
+
+        //option #2 switching to iframe passing index number of iframe
+        //driver.switchTo().frame(0);
+
+        //option #3 switching to iframe locate as web element and pass in frame() method
+        driver.switchTo().frame("//iframe[@id='mce_0_ifr']");
+
+
+        //assertion of header text is displayed or not
+        Assert.assertTrue(headerText.isDisplayed());
+
+
     }
 
 
-    //4. Assert: “Your content goes here.” Text is displayed.
-    //5. Assert: “An iFrame containing the TinyMCE WYSIWYG Edito
+
 
 
 
