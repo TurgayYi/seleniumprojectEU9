@@ -1,4 +1,4 @@
-package com.cydeo.tests.day_testNG_intro_dropdowns;
+package com.cydeo.tests.day5_testNG_intro_dropdowns;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
