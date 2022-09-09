@@ -1,6 +1,7 @@
 package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
 import com.cydeo.utilities.BrowserUtil;
+import com.cydeo.utilities.CRM_Utilities;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -54,6 +55,36 @@ public class T3_CRM_LOGIN {
     }
 
 
+    @Test
+
+    public void crm_login_test_2(){
+
+        //2. Go to : http://login1.nextbasecrm.com/
+        driver.get("http://login1.nextbasecrm.com/");
+        //3. Enter valid username
+
+        CRM_Utilities.crm_login(driver);        //6. Verify title is as expected:
+
+        BrowserUtil.verifyTitle(driver,"Portal");
+
+
+
+    }
+
+    public void crm_login_test_3(){
+
+        //2. Go to : http://login1.nextbasecrm.com/
+        driver.get("http://login1.nextbasecrm.com/");
+        //3. Enter valid username
+
+        CRM_Utilities.crm_login(driver,"helpdesk2@cybertekschool.com","UserUser");
+        //6. Verify title is as expected:
+
+        BrowserUtil.verifyTitle(driver,"Portal");
+
+
+
+    }
 
 
 
