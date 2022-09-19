@@ -34,7 +34,7 @@ public class WebTableUtils {
     //• Arg1: WebDriver driver
     //• Arg2: String costumerName
     //• Arg3: String expectedOrderDate
-    //This method should accept above mentioned arguments and internally assert
+    //This method should accept abovementioned arguments and internally assert
     //expectedOrderDate matching actualOrderDate
 
     public static void orderVerify (WebDriver driver, String customerName, String expectedOrderDate){
