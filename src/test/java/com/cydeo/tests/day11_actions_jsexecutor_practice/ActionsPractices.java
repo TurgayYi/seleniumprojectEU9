@@ -37,7 +37,9 @@ public class ActionsPractices {
         //WebElement homeLink = Driver.getDriver().findElement(By.xpath("//a[.='Home']"));
         //actions.moveToElement(homeLink).perform();
 
-        Driver.getDriver().quit();
+        //Driver.getDriver().quit();
+        Driver.closeDriver();
+
 
 
 
@@ -50,9 +52,17 @@ public class ActionsPractices {
     public void test_2(){
 
         Driver.getDriver().get("https://practice.cydeo.com/");
-
+        Driver.closeDriver();
     }
 
+
+    @Test
+
+    public void test_3(){
+
+        Driver.getDriver().get("https://practice.cydeo.com/");
+        Driver.closeDriver();
+    }
 
 
 
