@@ -12,6 +12,7 @@ public class POMPractices {
     @BeforeMethod
     public void setUpMethod(){
         Driver.getDriver().get("https://library1.cydeo.com");
+        libraryLoginPage = new LibraryLoginPage();
 
 
     }
@@ -28,7 +29,6 @@ public class POMPractices {
         //3- Do not enter any information
         //4- Click to “Sign in” button
 
-        libraryLoginPage = new LibraryLoginPage();
         libraryLoginPage.signInButton.click();
 
         //5- Verify expected error is displayed:
@@ -54,7 +54,6 @@ public class POMPractices {
 
 
         //3- Enter invalid email format
-        libraryLoginPage = new LibraryLoginPage();
         libraryLoginPage.inputUsername.sendKeys("alll");
         libraryLoginPage.signInButton.click();
 
@@ -86,7 +85,6 @@ public class POMPractices {
         //2- Go to: https://library1.cydeo.com
 
         //3- Enter incorrect username or incorrect password
-        libraryLoginPage = new LibraryLoginPage();
         libraryLoginPage.inputUsername.sendKeys("aaa@mail");
         libraryLoginPage.inputPassword.sendKeys("ooopp");
         libraryLoginPage.signInButton.click();
